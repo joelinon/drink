@@ -28,7 +28,7 @@ if(isset($_POST['btn_reg'])){
     <?php else: ?>    
     <form action="register.php" method="POST">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" placeholder="Preferred username" required>
+        <input type="text" name="username" id="username" placeholder="Preferred username" required >
         <label for="realname">Real Name</label>
         <input type="text" name="realname" id="realname" placeholder="Your real name"required>
         <label for="mail">Email</label>
