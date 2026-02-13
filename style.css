@@ -137,3 +137,43 @@ details .buttons{
 .invalid{
     border:2px solid red;
 }
+:root {
+    --formborder: rgb(0, 0, 0, .5);
+    --formback: rgb(0, 0, 0, .1);
+    --formlabelcolor: rgb(0, 0, 0, .6)
+}
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    padding: .5rem;
+    background: var(--formback);
+    border-radius: .6rem;
+}
+
+input,
+select,
+textarea {
+    font: 1.1rem system-ui;
+    padding: 0.8rem;
+    border: 1px solid var(--formborder);
+    border-radius: .3rem;
+}
+
+label {
+    position: relative;
+    top: .9rem;
+    left: .5rem;
+    font: .6rem system-ui;
+    color: var(--formlabelcolor);
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+    margin-top: 1rem;
+    margin-bottom: .6rem;
+    padding: .5rem;
+}

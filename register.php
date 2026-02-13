@@ -27,10 +27,13 @@ if(isset($_POST['btn_reg'])){
             <p>The admin have to approve the user befor you can login. A mail will be sent to th registred email when approved.</p>
     <?php else: ?>    
     <form action="register.php" method="POST">
+        <label for="username">Username</label>
         <input type="text" name="username" id="username" placeholder="Preferred username" required>
-
+        <label for="realname">Real Name</label>
         <input type="text" name="realname" id="realname" placeholder="Your real name"required>
+        <label for="mail">Email</label>
         <input type="email" name="mail" id="mail" placeholder="Your email adress" required>
+        <label for="password">Password</label>
         <input type="password" name="password" id="password" placeholder="Password (min 14 chars)" required  pattern=".{14,}">
         <input type="submit" name="btn_reg" value="Create user">
     </form>
@@ -50,9 +53,9 @@ if(isset($_POST['btn_reg'])){
     ]
     username.addEventListener("input", function(){
         if(names.includes(username.value)){
-            username.classList.add("invalid");
+            username.setCustomValidity("Username is already taken");
         }else{
-            username.classList.remove("invalid");
+            username.setCustomValidity("");
         }
     });
     
