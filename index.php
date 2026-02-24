@@ -21,25 +21,25 @@ if(isset($_SESSION['mess'])){
 <?php require_once("_nav.php"); ?>
     <main>
 <h1 class="message"><?=$mess;?></h1>
+<?php
+    $sql="SELECT * FROM tbl_drinks ORDER BY rating DESC"; 
+    $result=mysqli_query($conn, $sql);
+?>
+<?php while($row=mysqli_fetch_assoc($result)): ?>
 <details>
     <summary>
-    <div><h2>Screwdriver&nbsp;&nbsp;<span><?=isAlcoholic(1)?></span></h2><h4>Vodka and orange classic</h4></div> <div class="filler"></div>  <div>Rated: <?=showRating(3.500378)?></div>   
+    <div><h2><?=$row['drinkname']?>&nbsp;&nbsp;<span><?=isAlcoholic(intval($row['alcoholic']))?></span></h2><h4><?=$row['description']?></h4></div> <div class="filler"></div>  <div>Rated: <?=showRating($row['rating'])?></div>   
     </summary>
     <div class="ingredients">
-    Alcoholic drink<br>
-    <pre>
-    6 cl Vodka (Preferrably russian)
-    25 cl Orange Juice
-    A slice of orange peel as decoration
+    <pre><?=$row['ingredients']?>
     </pre>
     </div>
-    <div class="recipe">
-    Pour the vodka in a tall glass.
-    Add orange juice and ice after taste.
-    Shake furiosly ten minutes.
-    decorate with orange peel.</div>
-
+    <div class="recipe"><pre>
+    <?=$row['recipe']?>
+</pre></div>
 </details>
+<?php endwhile; ?>
+
     </main>
 <?php require_once("_footer.php"); ?>
     <dialog id="login" popover>

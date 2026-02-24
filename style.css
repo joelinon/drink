@@ -85,6 +85,9 @@ summary{
 .filler{
     flex-grow: 5;
 }
+pre{
+    font:1.2rem system-ui;
+}
 .id {
     width: 40px;
     font-weight: bold;
