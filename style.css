@@ -79,10 +79,11 @@ dialog form{
 summary{
     display:flex;
     width:100%;
-
     background: #0003;
     padding: .5rem;
-
+}
+.filler{
+    flex-grow: 5;
 }
 .id {
     width: 40px;

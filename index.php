@@ -20,7 +20,26 @@ if(isset($_SESSION['mess'])){
     </header>
 <?php require_once("_nav.php"); ?>
     <main>
-<h1><?=$mess;?></h1>
+<h1 class="message"><?=$mess;?></h1>
+<details>
+    <summary>
+    <div><h2>Screwdriver</h2><h4>Vodka and orange classic&nbsp;&nbsp;<span><?=isAlcoholic(1)?></span></h4></div> <div class="filler"></div>  <div>Rated: <?=showRating(3.500378)?></div>   
+    </summary>
+    <div class="ingredients">
+    Alcoholic drink<br>
+    <pre>
+    6 cl Vodka (Preferrably russian)
+    25 cl Orange Juice
+    A slice of orange peel as decoration
+    </pre>
+    </div>
+    <div class="recipe">
+    Pour the vodka in a tall glass.
+    Add orange juice and ice after taste.
+    Shake furiosly ten minutes.
+    decorate with orange peel.</div>
+
+</details>
     </main>
 <?php require_once("_footer.php"); ?>
     <dialog id="login" popover>

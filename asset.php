@@ -35,5 +35,20 @@ function isUserTaken($username){
         return false;
     }
 }
+function showRating($number){
+    $number=intval(round($number));
+    $retStr="";
+    for($vdo=0;$vdo<$number;$vdo++){
+        $retStr.="🫒";
+    }
+    return $retStr;
+}
+function isAlcoholic($value){
+    if($value){
+        return "🥴";
+    }else{
+        return "🤓";
+    }
+}
 
 ?>
