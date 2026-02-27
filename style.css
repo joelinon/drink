@@ -217,3 +217,7 @@ a.addDrink{
         color:#fff;
     }
 }
+.container{
+    display: grid;
+    place-content: center;
+}

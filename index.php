@@ -21,12 +21,13 @@ if(isset($_SESSION['mess'])){
         <h1>Drinks</h1>
     </header>
 <?php require_once("_nav.php"); ?>
-    <main>
+    <main><div class = "container">
 <h1 class="message"><?=$mess;?></h1>
 <?php if(isLevel(10)): ?>
 <a href="add_drink.php" class="addDrink">Add new drink!</a>
 <?php else: ?>
-<a href="register.php" class="addDrink">Register to add your own drink!</a>
+<a href="register.php" class="addDrink">Create an account or log in to add your own drink!</a>
+</div>
 <?php endif; ?>
 <?php
     $sql="SELECT * FROM tbl_drinks ORDER BY rating DESC"; 
