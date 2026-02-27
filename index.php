@@ -23,7 +23,11 @@ if(isset($_SESSION['mess'])){
 <?php require_once("_nav.php"); ?>
     <main>
 <h1 class="message"><?=$mess;?></h1>
+<?php if(isLevel(10)): ?>
 <a href="add_drink.php" class="addDrink">Add new drink!</a>
+<?php else: ?>
+<a href="register.php" class="addDrink">Register to add your own drink!</a>
+<?php endif; ?>
 <?php
     $sql="SELECT * FROM tbl_drinks ORDER BY rating DESC"; 
     $result=mysqli_query($conn, $sql);
