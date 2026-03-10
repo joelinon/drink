@@ -39,7 +39,7 @@ function showRating($number){
     $number=intval(round($number));
     $retStr="";
     for($vdo=0;$vdo<$number;$vdo++){
-        $retStr.="🫒";
+        $retStr.="⭐";
     }
     return $retStr;
 }

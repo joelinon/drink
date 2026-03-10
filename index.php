@@ -27,8 +27,8 @@ if(isset($_SESSION['mess'])){
 <a href="add_drink.php" class="addDrink">Add new drink!</a>
 <?php else: ?>
 <a href="register.php" class="addDrink">Create an account or log in to add your own drink!</a>
-</div>
-<?php endif; ?>
+
+<?php endif; ?></div>
 <?php
     $sql="SELECT * FROM tbl_drinks ORDER BY rating DESC"; 
     $result=mysqli_query($conn, $sql);

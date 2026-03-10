@@ -1,7 +1,7 @@
 :root{
     --clr_back_header:#000;
-    --clr_header:#8bb0de;
-    --clr_back_nav:#878787;
+    --clr_header:#842929;
+    --clr_back_nav:#5c21219c;
     --clr_back_footer:var(--clr_back_nav);
 
 }
@@ -16,6 +16,7 @@ body{
     display:flex;
     flex-direction: column;
     font-family: system-ui, sans-serif;
+    background-image: linear-gradient(to bottom, #000000ac, #0000002d), url(bar.jpg);
 }
 header{
     background: var(--clr_back_header);
@@ -43,13 +44,15 @@ nav{
     & a:hover{
         background: #0006;
     }
+    
 }
 main{
     flex-grow: 5;
-    display:flex;
-    flex-direction: column;
+    display: grid;
+    place-content: center;
     gap:1rem;
     padding-top: 1rem;
+    color: white;
 }
 footer{
     background: var(--clr_back_footer);
@@ -79,8 +82,8 @@ dialog form{
 summary{
     display:flex;
     width:100%;
-    background: #0003;
-    padding: .5rem;
+    --background: #0003;
+    padding: 1rem;
 }
 .filler{
     flex-grow: 5;
@@ -90,6 +93,7 @@ pre{
     padding: 1rem;
     background: #fff4;
     text-indent: 0;
+    border-radius: .5rem;
 }
 h1.mess{
     font:.9 system-ui;
@@ -111,7 +115,12 @@ h1.mess{
     font-size: 130%;
     font-weight: bold;
 }
-
+.message{
+    margin-top: 0rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+}
 .mail a{
     font-size: 80%;
     text-decoration: none;
@@ -119,10 +128,11 @@ h1.mess{
 details{
     display:flex;
     flex-direction: column;
-    background: #0001;
-    width:50%;
+    background: rgb(168, 68, 68);
+    width:50vw;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 30px;
 }
 details .userdetails{
     display:flex;
@@ -196,6 +206,14 @@ button {
     margin-top: 1rem;
     margin-bottom: .6rem;
     padding: .5rem;
+    font: 1.1rem system-ui;
+    font-weight: 500;
+    background: rgb(141, 38, 38);
+    border-radius: 0.2rem;
+    &:hover{
+        background: rgba(102, 34, 34, 0.4);
+        color:#fff;
+    }
 }
 .ingredients, .recipe{
     padding: .6rem;
@@ -206,14 +224,14 @@ button {
 a.addDrink{
     text-decoration: none;
     padding: .6rem 1rem;
-    background: #0002;
+    background: rgb(141, 38, 38);
     border:1px solid #0006;
     border-radius:10px;
     width:fit-content;
     font:bold 1.4rem system-ui;
     color:#000;
     &:hover{
-        background: #2266;
+        background: rgba(102, 43, 34, 0.461);
         color:#fff;
     }
 }

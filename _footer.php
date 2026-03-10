@@ -1,3 +1,3 @@
     <footer>
-        &copy;j4rl 2026
+        &copy;Jolle 2026
     </footer>  
