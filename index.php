@@ -26,7 +26,7 @@ if(isset($_SESSION['mess'])){
 <?php if(isLevel(10)): ?>
 <a href="add_drink.php" class="addDrink">Add new drink!</a>
 <?php else: ?>
-<a href="register.php" class="addDrink">Create an account or log in to add your own drink!</a>
+<a href="logoptions.php" class="addDrink">Create an account or log in to add your own drink!</a>
 
 <?php endif; ?></div>
 <?php

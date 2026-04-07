@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <?php require_once("asset.php"); ?>
 <?php
-if(isLevel(10)){ 
-    header("Location: index.php");
-}
+
 if(isset($_POST['btn_reg'])){
     $username=$_POST['username'];
     $realname=$_POST['realname'];
