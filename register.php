@@ -23,6 +23,7 @@ if(isset($_POST['btn_reg'])){
     <?php if(isset($_GET['reg'])): ?>
             <h1>Thank you for registering a user!</h1>
             <p>The admin have to approve the user befor you can login. A mail will be sent to th registred email when approved.</p>
+            <p><a href="index.php">Return to homepage</a></p>
     <?php else: ?>    
     <form action="register.php" method="POST">
         <label for="username">Username</label>
@@ -62,3 +63,15 @@ if(isset($_POST['btn_reg'])){
     });
     
 </script>
+<style>
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #842929;
+    }
+    body{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    @import url("style.css");
+</style>
